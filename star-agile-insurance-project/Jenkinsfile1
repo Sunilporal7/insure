@@ -9,5 +9,10 @@ pipeline{
             git branch: 'main', url: 'https://github.com/Sunilporal7/insure.git'
         }
         }
+         stage('build') {
+        steps{
+           sh 'mvn clean package'
+        }
+        }
     }
 }
